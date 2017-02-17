@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}書籍の一覧{% endblock title %}
+
+{% block extrahead %}
+<style>
+.page-header {
+  text-align: center;
+}
+table {
+  margin-top: 8px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+    <h3 class="page-header">クリアデータの一覧</h3>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th style="text-align:center;">ユーザ名</th>
+          <th style="text-align:center;">クリアタイム</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for data in data_list %}
+        <tr>
+          <td style="text-align:center;">{{ data.username }}</td>
+          <td style="text-align:center;">{{ data.cleartime }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+{% endblock content %}

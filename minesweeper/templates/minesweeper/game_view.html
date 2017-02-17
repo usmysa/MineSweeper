@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}MineSweeper{% endblock title %}
+
+{% block extrahead %}
+<script src="/static/js/game_view.js"></script>
+<script src="/static/js/post_ajax.js"></script>
+<link href="/static/css/game_view.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <h3 class="page-header">MineSweeper</h3>
+
+      <div id="space">
+        {% for life in lifes %}
+            <span id="life-{{ life }}" class="life glyphicon glyphicon-heart" aria-hidden="true"></span>
+        {% endfor%}
+      </div>
+
+    <button id="StartBtn" class="btn btn-lg btn-default">START</button>
+
+    <!--<a id="best_time_label" class="list-group-item" href="data">BestTime　<span id="best_time">{{best_time}}</span></a>-->
+    <a id="best_time_label" class="list-group-item" href="data">
+      <h4 class="list-group-item-heading">BestTime　<span id="best_time">{{best_time}}</span></h4>
+		  <p class="list-group-item-text">クリアデータの一覧を見る</p>
+    </a>
+    <li id="timer" class="list-group-item">00:00:00</li>
+
+    <div class="progress">
+	     <div id="ProgressBar" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar">100%</div>
+    </div>
+
+    {% for width in widths %}
+      <div class="btn-group btn-group-sm" role="group">
+      {% for height in heights %}
+        <button id="MineBtn-{{ width }}-{{ height }}" type="button" class="mine btn btn-info center-block">　</button>
+      {% endfor%}
+      </div>
+    {% endfor%}
+
+{% endblock content %}

@@ -1,0 +1,94 @@
+
+#timer {
+  text-align: center;
+  font-size: 18px;
+  width: 15%;
+  height: 55px;
+  float: right;
+  margin-right: 30px;
+}
+
+#best_time_label {
+  text-align: left;
+  color: #555555;
+  font-size: 17px;
+  width: 20%;
+  float: right;
+  margin-right: 30px;
+}
+
+#best_time {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.list-group-item-heading {
+  font-weight: normal;
+  text-align: center;
+  font-size: 15px;
+}
+.list-group-item-text{
+  text-align: center;
+  font-size: 9px;
+}
+#space {
+  margin-top: 20px;
+  display:inline;
+}
+
+.life {
+  margin-left: 10px;
+  font-size: 40px;
+  opacity: 0.8;
+}
+
+.glyphicon-heart-empty {
+  font-size: 42px;
+}
+
+.mine {
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.mine:hover {
+  opacity: 0.65;
+}
+
+.pushed_btn {
+  background: rgba(210, 210, 210, 1);
+}
+
+.progress {
+  margin-top: 20px;
+}
+
+#ProgressBar {
+  width: 100%;
+}
+
+#StartBtn, #ReStartBtn {
+  margin-bottom: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 8%;
+  margin: 0 auto;
+}
+
+.glyphicon-heart {
+  font-size: 3em;
+}
+
+.page-header {
+  text-align:center;
+}
+
+#info_area {
+  width: 30%;
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  z-index: 2;
+}
