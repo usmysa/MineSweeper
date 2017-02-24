@@ -175,7 +175,8 @@ function getCharColor(num){
 
 // 半角数字を全角に変換
 function convertEm(num){
-  var converted_num = num.replace(/[0-9]/g, function(str) {
+
+  var converted_num = String(num).replace(/[0-9]/g, function(str) {
     return String.fromCharCode(str.charCodeAt(0) + 0xFEE0);
   });
 
@@ -391,6 +392,13 @@ jQuery(document).ready( function() {
   // スタートボタンを押した場合の処理
   $("#StartBtn").click( function() {
     clickedStartBtn();
+  });
+
+  // 「クリアデータ一覧を見る」を押した場合の処理
+  $("#best_time_label").click( function() {
+    if (start_flag == 1) {
+      gameover();
+    }
   });
 
   // ボタンを押した場合の処理
