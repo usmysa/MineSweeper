@@ -10,6 +10,9 @@
 table {
   margin-top: 8px;
 }
+#close {
+  width: 200px;
+}
 </style>
 {% endblock %}
 
@@ -31,4 +34,5 @@ table {
         {% endfor %}
       </tbody>
     </table>
+    <button id="close" type="button" class="btn btn-warning center-block" onclick="window.close()">CLOSE</button>
 {% endblock content %}

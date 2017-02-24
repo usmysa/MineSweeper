@@ -17,6 +17,11 @@
   margin-right: 30px;
 }
 
+#best_time_label:hover {
+  background-color: rgba(245, 245, 245, 1);
+  transform: scale(1.1);
+}
+
 #best_time {
   font-weight: bold;
   white-space: nowrap;

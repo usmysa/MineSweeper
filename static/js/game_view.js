@@ -175,36 +175,11 @@ function getCharColor(num){
 
 // 半角数字を全角に変換
 function convertEm(num){
-  var converted_num = "";
-  switch (num) {
-    case 1:
-      converted_num = "１";
-      break;
-    case 2:
-      converted_num = "２";
-      break;
-    case 3:
-      converted_num = "３";
-      break;
-    case 4:
-      converted_num = "４";
-      break;
-    case 5:
-      converted_num = "５";
-      break;
-    case 6:
-      converted_num = "６";
-      break;
-    case 7:
-      converted_num = "７";
-      break;
-    case 8:
-      converted_num = "８";
-      break;
-    default:
-      converted_num = "　";
-      break;
-  }
+
+  var converted_num = String(num).replace(/[0-9]/g, function(str) {
+    return String.fromCharCode(str.charCodeAt(0) + 0xFEE0);
+  });
+
   return converted_num;
 }
 
@@ -417,6 +392,13 @@ jQuery(document).ready( function() {
   // スタートボタンを押した場合の処理
   $("#StartBtn").click( function() {
     clickedStartBtn();
+  });
+
+  // 「クリアデータ一覧を見る」を押した場合の処理
+  $("#best_time_label").click( function() {
+    if (start_flag == 1) {
+      gameover();
+    }
   });
 
   // ボタンを押した場合の処理
